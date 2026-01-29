@@ -1,0 +1,10 @@
+* Assignment 2.4 – Practical diode DC sweep (1N4148)
+
+V1 in 0 0
+R1 in a 1k
+D1 a 0 DREAL
+
+.model DREAL D(Is=2n N=1.9 Rs=0.6 Cjo=2p)
+
+.dc V1 -2 2 0.01
+.end

@@ -1,0 +1,10 @@
+* Assignment 2.4 – Ideal diode DC sweep
+
+V1 in 0 0
+R1 in a 1k
+D1 a 0 DIDEAL
+
+.model DIDEAL D(Ron=1m Roff=1G Vfwd=0)
+
+.dc V1 -2 2 0.01
+.end
