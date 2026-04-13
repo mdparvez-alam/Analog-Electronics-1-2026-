@@ -1,0 +1,16 @@
+* Task 1 - Open-Loop Op-Amp Comparator
+* LTspice netlist
+Vin in 0 SINE(0 10m 1k)
+VCC vplus 0 5
+VEE vminus 0 -5
+
+* Ideal voltage-controlled source acting as high-gain op-amp
+EOP out 0 in 0 1e6
+Rout out out_lim 1
+Dhi out_lim vplus Dclamp
+Dlo vminus out_lim Dclamp
+.model Dclamp D
+
+.tran 10ms
+.backanno
+.end

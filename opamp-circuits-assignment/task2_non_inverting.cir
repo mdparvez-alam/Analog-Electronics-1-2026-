@@ -1,0 +1,17 @@
+* Task 2 - Non-Inverting Amplifier
+Vin in 0 SINE(0 10m 1k)
+VCC vplus 0 5
+VEE vminus 0 -5
+
+Rg nminus 0 10k
+Rf out nminus 90k
+
+* Behavioral op-amp approximation with rail limiting
+EERR err 0 in nminus 1e6
+BOUT out 0 V = limit(V(err), -4.9, 4.9)
+
+RL out 0 1k
+
+.tran 10ms
+.backanno
+.end
